@@ -42,9 +42,9 @@ class Crack:
 
         def process_ip(ip):
             for username in usernamelist:
-                progress.update(username_task, description=f"[red]{username}")
+                progress.update(username_task, description=f"[red]username: {username}")
                 for password in passwordlist:
-                    progress.update(password_task, description=f"[blue]{password}")
+                    progress.update(password_task, description=f"[blue]password: {password}")
                     should_break = False
                     try:
                         data = {"username": username, "password": password}
@@ -71,8 +71,9 @@ class Crack:
 
                         if json_data.get("success"):
                             with self.lock:
+                                typer.secho(f"\nCracked!\nip => {ip}\nusername =>{username}\npassword => {password}\n", fg=typer.colors.GREEN)
                                 cracked.append(
-                                    f"ip => {ip}\nusername =>{username}\npassword => {password}\n"
+                                    f"\nip => {ip}\nusername =>{username}\npassword => {password}\n\n"
                                 )
                             return (
                                 ip  # Exit the function once a successful login is found
