@@ -1,2 +1,5 @@
 .vscode/
 __pycache__/
+ips.txt
+usernames.txt
+passwords.txt
