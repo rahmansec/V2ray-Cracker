@@ -45,5 +45,5 @@ Start crack!
 
 ## Screenshots
 
-![App Screenshot](https://github.com/rahmansec/V2ray-Cracker/raw/test/Screenshot.png)
+![App Screenshot](https://github.com/rahmansec/V2ray-Cracker/raw/master/Screenshot.png)
 
