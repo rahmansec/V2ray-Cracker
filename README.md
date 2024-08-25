@@ -16,7 +16,7 @@
 
 🔷 Check if target is alive for crack (saves time)
 
-## Run Locally
+## Run
 
 Clone the project
 
