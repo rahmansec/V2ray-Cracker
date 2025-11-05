@@ -13,11 +13,7 @@ def make_request_with_retries( url: str, data: dict, max_retries: int = 6) :
         except req.RequestException as e:
             attempt += 1
             if attempt < max_retries:
-                typer.secho(f"Retrying request to {url} ({attempt}/{max_retries})...", fg=typer.colors.YELLOW)
-                time.sleep(1.5)  
-            else:
-                typer.secho(f"Failed request to {url} after {max_retries} attempts: {e}", fg=typer.colors.RED)
-
+                time.sleep(1.5) 
 
 def read_file( path: str):
     if os.path.exists(path):
